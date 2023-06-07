@@ -34,11 +34,18 @@ const Movies = () => {
       key={movie.imdbID}
     >
       <Card
+        onClick={() => handleAddToFav(movie)}
         key={movie.imdbID}
         sx={{
           display: "flex",
           border: "1px",
           margin: "5px",
+          backgroundColor: "#ada180",
+          transition: "0.3s ease-in-out",
+          ":hover": {
+            cursor: "pointer",
+            backgroundColor: "#17cc00"
+          }
         }}
       >
         <div style={{ flex: 1 }}>
@@ -47,9 +54,9 @@ const Movies = () => {
               variant="h5"
               sx={{
                 fontSize: {
-                  xs: "18px",
-                  sm: "22px",
-                  md: "25px",
+                  xs: "10px",
+                  sm: "12px",
+                  md: "14px",
                 },
               }}
             >
@@ -58,7 +65,6 @@ const Movies = () => {
             <Stack>
               <Typography>({movie.Year})</Typography>
             </Stack>
-            <Button onClick={() => handleAddToFav(movie)}><AddIcon/> Add</Button>
           </CardContent>
         </div>
         <CardMedia

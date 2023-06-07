@@ -38,7 +38,7 @@ function App() {
             ":hover": {
             color: 'blue',
         },
-          }} onClick={() => setSwitchPage(false)} color={switchPage ? "": "blue"}>Movies</Typography>  
+          }} onClick={() => setSwitchPage(false)} color={switchPage ? "": "white"}>Movies</Typography>  
           <Typography variant='h2' sx={{
                 cursor: "pointer",
                 fontSize: {
@@ -49,7 +49,7 @@ function App() {
             ":hover": {
             color: 'blue',
         },
-          }}  onClick={() => setSwitchPage(true)} color={switchPage ? "blue": ""}>Favorite Movies</Typography>
+          }}  onClick={() => setSwitchPage(true)} color={switchPage ? "white": ""}>Favorite Movies</Typography>
         </Stack>
         <Grid container sx={{
           marginTop: "5rem",

@@ -12,19 +12,20 @@ const FavMovies = () => {
     <Card key={favM.imdbID}         
     sx={{
           margin: "5px",
+          backgroundColor: "#ada180"
         }}>
     <div style={{flex: 1}}>
       <CardContent>
         <Typography variant='h5' sx={{
                                                   fontSize: {
-                xs: "18px",
-                sm: "22px",
-                md: "25px",},
+                                                    xs: "10px",
+                  sm: "12px",
+                  md: "14px",},
                 height: "50px"
         }}>{favM.Title}</Typography>
       </CardContent>
     </div>
-    <Button variant="outlined" color="error" sx={{marginBottom: "7px", width: "100%"}} onClick={() => handleRemoveFav(favM)}><RemoveIcon/> Remove</Button>
+    <Button variant="outlined" color="error" sx={{marginBottom: "7px", width: "100%", ":hover": {backgroundColor: "red", color: "white"}}} onClick={() => handleRemoveFav(favM)}><RemoveIcon/> Remove</Button>
     <CardMedia 
         style={{width: "100%", height: "200px"}}
         image={favM.Poster}

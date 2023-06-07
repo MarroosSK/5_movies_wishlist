@@ -10,7 +10,7 @@ import { MovieContext } from "../../context/movieContext";
 const Search = ({apiKey}) => {
     const {term, setTerm, setMovieList} = useContext(MovieContext)
 
-    const URL = `http://www.omdbapi.com?s=${term}&apikey=${apiKey}`
+    const URL = `https://www.omdbapi.com?s=${term}&apikey=${apiKey}`
 
 
 
@@ -58,12 +58,12 @@ const Search = ({apiKey}) => {
                     sm: "42px",
                     md: "50px",
             }
-            }}>Movie<span style={{color: "mediumblue", textDecoration: "underline"}}>Info</span></Typography>
+            }}>Movie<span style={{color: "red", textDecoration: "underline"}}>Wish</span></Typography>
         <Stack
             direction="row"
             alignContent="center"
         >
-            <TextField required type='text' placeholder='Find...' value={term} onChange={(e) => setTerm(e.target.value)} 
+            <TextField sx={{color: "white"}} required type='text' placeholder='Find...' value={term} onChange={(e) => setTerm(e.target.value)} 
                 InputProps={{
                     endAdornment: (
                         <InputAdornment position='end'>
